@@ -1,0 +1,80 @@
+
+@media only screen and(max-width: 1100px){
+    
+}
+
+@media only screen and(max-width: 1000px){
+    
+   
+
+
+
+}
+@media only screen and(max-width: 900px){
+    .space_info_anais{
+        .spc_photo{
+            margin: 0 auto;
+        }
+        .spc_photo, .spc_texto{
+            grid-column: span 2!important;
+        }
+    }
+
+    .spc_img{
+        top: -220px!important;
+    }
+    .name, .number, .mail, .question{
+        grid-column: span 4!important;
+    }
+    
+
+
+}
+@media only screen and(max-width: 820px){
+    
+  
+
+
+}
+
+
+
+@media only screen and(max-width: 530px){
+
+    .pasooo{
+        grid-column: span 2!important;
+        margin-bottom: 3em ;
+    }
+  
+    .third_sec{
+        padding: 100px 0 100px 0!important;
+    }
+
+    .fiv_sec{
+        padding: 230px 0 100px 0!important;
+    }
+    
+    .spc_img{
+        top: -100px !important;
+    }
+
+    .tit_different{
+        text-align: center!important;
+    }
+
+    .formulario{
+        padding: 100px 20px 50px 20px!important;
+    }
+    
+}
+
+
+@media only screen and(max-width: 460px){
+  
+    .spc_logo, .spc_info_footer{
+        grid-column: span 2!important;
+        display: flex;
+        justify-content: center;
+    }
+    
+}

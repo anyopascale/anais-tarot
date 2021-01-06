@@ -1,0 +1,472 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-stretch: normal;
+  font-size: 0.9rem;
+  outline: none;
+  scroll-behavior: smooth;
+  font-weight: normal;
+}
+* a,
+*::before a,
+*::after a {
+  text-decoration: none;
+}
+* button,
+* select,
+*::before button,
+*::before select,
+*::after button,
+*::after select {
+  cursor: pointer;
+}
+
+html {
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tit_different {
+  font-family: "Yellowtail", cursive !important;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+header .spc_logo {
+  width: 130px;
+}
+header .spc_logo img {
+  width: 100%;
+}
+
+.first_sec {
+  position: relative;
+  top: -147px;
+}
+
+.main_section {
+  overflow: hidden;
+  position: relative;
+}
+
+.mask {
+  -webkit-mask: url("../images/base.svg");
+          mask: url("../images/base.svg");
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  -webkit-mask-position: center;
+          mask-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.base_bg {
+  background-image: url("../images/bg.png");
+  background-attachment: fixed;
+  background-repeat: none;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.base_bg .cntrls_hands {
+  position: relative;
+  bottom: -100px;
+  width: 100%;
+}
+.base_bg .cntrls_hands img {
+  width: 100%;
+}
+
+.cartas_sec {
+  position: relative;
+}
+.cartas_sec .container {
+  position: relative;
+}
+.cartas_sec .spc_button_activate {
+  position: absolute;
+  top: -520px !important;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+.cartas_sec .spc_button_activate .button_activ {
+  background-color: #ede658;
+  border-radius: 10px;
+  color: black;
+  padding: 1em 3em;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.cartas_sec .spc_button_activate .button_activ:hover {
+  transform: scale(1.1);
+}
+.cartas_sec .disable_act {
+  opacity: 0;
+  z-index: -20;
+}
+.cartas_sec .spc_cards {
+  position: relative;
+  top: -620px !important;
+}
+.cartas_sec .spc_cards .cards {
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2vw;
+}
+.cartas_sec .spc_cards .cards .card {
+  position: relative;
+  width: 100%;
+}
+.cartas_sec .spc_cards .cards .card .cara_carta, .cartas_sec .spc_cards .cards .card .atras_carta {
+  width: 100%;
+  position: absolute;
+  transition: 0.4s;
+}
+.cartas_sec .spc_cards .cards .card .cara_carta {
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+.cartas_sec .spc_cards .cards .card .cara_carta img {
+  width: 100%;
+}
+.cartas_sec .spc_cards .cards .card .atras_carta {
+  z-index: 2;
+}
+.cartas_sec .spc_cards .cards .card .atras_carta img {
+  width: 100%;
+}
+.cartas_sec .spc_cards .cards .card:first-child {
+  transform: rotatez(-15deg);
+  z-index: 3;
+}
+.cartas_sec .spc_cards .cards .card:nth-child(2) {
+  top: -100px !important;
+}
+.cartas_sec .spc_cards .cards .card:last-child {
+  transform: rotatez(15deg);
+  z-index: 3;
+}
+.cartas_sec .spc_cards .cards .active {
+  transform: rotatez(0deg) !important;
+}
+.cartas_sec .spc_cards .cards .active .cara_carta {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+.cartas_sec .spc_cards .cards .active .atras_carta {
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.second_sec {
+  padding-bottom: 100px;
+}
+.second_sec .space_info_anais {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2vw;
+}
+.second_sec .space_info_anais .spc_photo {
+  max-width: 400px;
+}
+.second_sec .space_info_anais .spc_photo img {
+  width: 100%;
+}
+.second_sec .space_info_anais .spc_texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.second_sec .space_info_anais .spc_texto .spc_logo_txt {
+  width: 200px;
+}
+.second_sec .space_info_anais .spc_texto .spc_logo_txt img {
+  width: 100%;
+}
+.second_sec .space_info_anais .spc_texto p {
+  margin-bottom: 1.5em;
+  text-align: justify;
+  line-height: 25px;
+}
+
+.third_sec {
+  background-image: url("../images/bg_2.png");
+  background-attachment: fixed;
+  background-repeat: none;
+  background-size: cover;
+  padding: 100px 0 300px 0;
+  color: white;
+}
+.third_sec .spc_info_third_sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.third_sec .spc_info_third_sec .titulo_principal_thrd_sec h2 {
+  font-size: 3.7em;
+}
+.third_sec .spc_info_third_sec .pasos {
+  background-color: white;
+  padding: 1em 3em;
+  color: black;
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+.third_sec .spc_info_third_sec .pasos p {
+  font-size: 1.3em;
+  letter-spacing: 2px;
+}
+.third_sec .spc_info_third_sec .spc-pasos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2vw;
+  width: 100%;
+}
+.third_sec .spc_info_third_sec .spc-pasos .pasooo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.third_sec .spc_info_third_sec .spc-pasos .pasooo .t1_paso {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.fourth_sec {
+  position: relative;
+}
+.fourth_sec .container {
+  position: relative;
+}
+.fourth_sec .spc_img {
+  position: absolute;
+  top: -250px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.fourth_sec .spc_img img {
+  width: 80%;
+}
+
+.fiv_sec {
+  padding: 350px 0 100px 0;
+  background-color: #090b13;
+}
+.fiv_sec .space_formulario .formulario {
+  background-color: #1a1e27;
+  padding: 100px 50px 50px 50px;
+  border-radius: 10px;
+  position: relative;
+}
+.fiv_sec .space_formulario .formulario .icon_top_form {
+  position: absolute;
+  width: 100%;
+  top: -100px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fiv_sec .space_formulario .formulario h4 {
+  text-align: center;
+  color: white;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+.fiv_sec .space_formulario .formulario .cntrl_form .cntrl_grid_form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+.fiv_sec .space_formulario .formulario .cntrl_form .cntrl_grid_form .question, .fiv_sec .space_formulario .formulario .cntrl_form .cntrl_grid_form .cntrl_btm {
+  grid-column: span 4;
+}
+.fiv_sec .space_formulario .formulario .cntrl_form .cntrl_grid_form .mail {
+  grid-column: span 2;
+}
+.fiv_sec .space_formulario .formulario .cntrl_form .cntrl_grid_form .question {
+  text-align: center;
+}
+.fiv_sec .space_formulario .formulario .cntrl_form .cntrl_grid_form .cntrl_btm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fiv_sec .space_formulario .formulario .cntrl_form form input {
+  background-color: #343d4c;
+  border-radius: 5px;
+  padding: 1em;
+  border: 1px solid #343d4c;
+  color: white;
+}
+.fiv_sec .space_formulario .formulario .cntrl_form form ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+.fiv_sec .space_formulario .formulario .cntrl_form form button {
+  border-radius: 5px;
+  background-color: #93453f;
+  border: 1px solid #93453f;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 0.5em 40px 0.5em 40px;
+  transition: 0.4s;
+}
+.fiv_sec .space_formulario .formulario .cntrl_form form button:hover {
+  background-color: #6f3430;
+}
+
+.six_sec {
+  background-color: #090b13;
+  padding: 0px 0 100px 0;
+}
+.six_sec .contrl_six_sec h4 {
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  margin-bottom: 1.5em;
+}
+.six_sec .contrl_six_sec .spc_testimonios .box_testimonio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px 0 20px;
+}
+.six_sec .contrl_six_sec .spc_testimonios .box_testimonio .box_photo {
+  max-width: 150px;
+}
+.six_sec .contrl_six_sec .spc_testimonios .box_testimonio .box_photo img {
+  width: 100%;
+}
+.six_sec .contrl_six_sec .spc_testimonios .box_testimonio .name_testimonio {
+  color: white;
+  font-size: 2.3em;
+}
+.six_sec .contrl_six_sec .spc_testimonios .box_testimonio p {
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-align: justify;
+}
+
+footer {
+  background-image: url("../images/bg_2.png");
+  background-attachment: fixed;
+  background-repeat: none;
+  background-size: cover;
+  padding: 100px 0 100px 0;
+}
+footer .spc_footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+footer .spc_footer .spc_logo .box_logo_footer {
+  width: 130px;
+}
+footer .spc_footer .spc_logo .box_logo_footer img {
+  width: 100%;
+}
+footer .spc_footer .spc_info_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .spc_footer .spc_info_footer p {
+  text-align: left;
+  color: white;
+}
+footer .spc_footer .spc_info_footer p a {
+  color: white;
+  margin-left: 1em;
+}
+
+.sub_footer {
+  background-color: #090b13;
+  padding: 1em 0;
+}
+.sub_footer p {
+  text-align: center;
+  color: #303a4c;
+}
+
+@media only screen and (max-width: 900px) {
+  .space_info_anais .spc_photo {
+    margin: 0 auto;
+  }
+  .space_info_anais .spc_photo, .space_info_anais .spc_texto {
+    grid-column: span 2 !important;
+  }
+
+  .spc_img {
+    top: -220px !important;
+  }
+
+  .name, .number, .mail, .question {
+    grid-column: span 4 !important;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .pasooo {
+    grid-column: span 2 !important;
+    margin-bottom: 3em;
+  }
+
+  .third_sec {
+    padding: 100px 0 100px 0 !important;
+  }
+
+  .fiv_sec {
+    padding: 230px 0 100px 0 !important;
+  }
+
+  .spc_img {
+    top: -100px !important;
+  }
+
+  .tit_different {
+    text-align: center !important;
+  }
+
+  .formulario {
+    padding: 100px 20px 50px 20px !important;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .spc_logo, .spc_info_footer {
+    grid-column: span 2 !important;
+    display: flex;
+    justify-content: center;
+  }
+}

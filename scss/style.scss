@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-stretch: normal;
+    font-size: .9rem;
+    outline: none;
+    scroll-behavior: smooth;
+    font-weight: normal;
+    a {
+        text-decoration: none;
+    }
+    button,
+    select {
+        cursor: pointer;
+    }
+
+}
+
+html{
+    background-color: rgb(240, 240, 240);
+}
+
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.tit_different{
+    font-family: 'Yellowtail', cursive!important;
+}
+
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    .spc_logo{
+        width: 130px;
+        img{
+            width: 100%;
+        }
+    }
+}
+.first_sec{
+    position: relative;
+    top: -147px;
+}
+
+.main_section{
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.mask{
+    mask: url("../images/base.svg");
+    mask-size: cover;
+    mask-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.base_bg{
+    background-image: url("../images/bg.png");
+    background-attachment: fixed;
+    background-repeat: none;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    .cntrls_hands{
+        position: relative;
+        bottom: -100px;
+        width: 100%;
+        img{
+            width: 100%;
+
+        }
+    }
+}
+
+
+.cartas_sec{
+    position: relative;
+    .container{
+        position: relative;
+    }
+    .spc_button_activate{
+        position: absolute;
+        top: -520px!important;
+        z-index: 5;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .4s;
+        .button_activ{
+            background-color: #ede658;
+            border-radius: 10px;
+            color: black;
+            padding: 1em 3em;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: .4s;
+        }
+        .button_activ:hover{
+            transform: scale(1.1);
+        }
+    }
+    .disable_act{
+        opacity: 0;
+        z-index: -20;
+    }
+    .spc_cards{
+        position: relative;
+        top: -620px!important;
+        .cards{
+            width: 60%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2vw;
+            .card{
+                position: relative;
+                width: 100%;
+                .cara_carta, .atras_carta{
+                    
+                    width: 100%;
+                    position: absolute;
+                    transition: .4s;
+                }
+                .cara_carta{
+                    z-index: 1;
+                    transform: rotateY(180deg);
+                    img{
+                        width: 100%;
+                    }
+                }
+                .atras_carta{
+                    z-index: 2;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+
+            .card:first-child{
+                transform: rotatez(-15deg);
+                z-index: 3;
+            }
+            .card:nth-child(2){
+                top: -100px!important;
+            }
+            .card:last-child{
+                transform: rotatez(15deg);
+                z-index: 3;
+            }
+            .active{
+                transform: rotatez(0deg)!important;
+                .cara_carta{
+                    z-index: 2;
+                    transform: rotateY(0deg);
+                }
+                .atras_carta{
+                    z-index: 1;
+                    transform: rotateY(180deg);
+                }
+            }
+
+            // .card:hover{
+            //     .cara_carta{
+            //         z-index: 2;
+            //         transform: rotateY(0deg);
+            //     }
+            //     .atras_carta{
+            //         z-index: 1;
+            //         transform: rotateY(180deg);
+
+            //     }
+            // }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.second_sec{
+    padding-bottom: 100px;
+    .space_info_anais{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2vw;
+        .spc_photo{
+            max-width: 400px;
+            img{
+                width: 100%;
+            }
+        }
+        .spc_texto{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .spc_logo_txt{
+                width: 200px;
+                img{
+                    width: 100%;
+                }
+            }
+            p{
+                margin-bottom: 1.5em;
+                text-align: justify;
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+
+
+
+.third_sec{
+    background-image: url("../images/bg_2.png");
+    background-attachment: fixed;
+    background-repeat: none;
+    background-size: cover;
+    padding: 100px 0 300px 0;
+    color: white;
+    .spc_info_third_sec{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .titulo_principal_thrd_sec{
+            h2{
+                font-size: 3.7em;
+            }
+        }
+        .pasos{
+            background-color: white;
+            padding: 1em 3em;
+            color: black;
+            border-radius: 10px;
+            margin-bottom: 100px;
+            p{
+                font-size: 1.3em;
+                letter-spacing: 2px;
+            }
+        }
+        .spc-pasos{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2vw;
+            width: 100%;
+            .pasooo{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .t1_paso{
+                    font-size: 1.6em;
+                    font-weight: bold;
+                }
+                p{
+
+                }
+            }
+        }
+    }
+}
+
+.fourth_sec{
+    position: relative;
+    .container{
+        position: relative;
+    }
+    .spc_img{
+        position: absolute;
+        top: -250px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 80%;
+        }
+    }
+}
+
+.fiv_sec{
+    padding: 350px 0 100px 0;
+    background-color: #090b13;
+    .space_formulario{
+        .formulario{
+            background-color: #1a1e27;
+            padding: 100px 50px 50px 50px;
+            border-radius: 10px;
+            position: relative;
+            .icon_top_form{
+                position: absolute;
+                width: 100%;
+                top: -100px;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .contr_icon_logo_form{
+                    img{
+    
+                    }
+                }
+            }
+            h4{
+                text-align: center;
+                color: white;
+                font-size: 1.3em;
+                margin-bottom: 1em;
+            }
+            .cntrl_form{
+                .cntrl_grid_form{
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-gap: 30px;
+                    .question, .cntrl_btm{
+                        grid-column: span 4;
+                    }
+                    .mail{
+                        grid-column: span 2;
+                    }
+                    .question{
+                        text-align: center;
+                    }
+                    .cntrl_btm{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                form{
+                    input{
+                        background-color: #343d4c;
+                        border-radius: 5px;
+                        padding: 1em;
+                        border: 1px solid #343d4c;
+                        color: white;
+                    }
+                    ::-webkit-input-placeholder { 
+                        color: rgba(255,255,255, .4);
+                    } 
+                    button{
+                        border-radius: 5px;
+                        background-color: #93453f;
+                        border: 1px solid #93453f;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 1.3em;
+                        padding: .5em 40px .5em 40px;
+                        transition: .4s;
+                    }
+                    button:hover{
+                        background-color: darken(#93453f, 10);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.six_sec{
+    background-color: #090b13;
+    padding: 0px 0 100px 0;
+    .contrl_six_sec{
+        h4{
+            text-align: center;
+            font-size: 3em;
+            color: white;
+            margin-bottom: 1.5em;
+        }
+        .spc_testimonios{
+            .box_testimonio{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0 20px 0 20px;
+                .box_photo{
+                    max-width: 150px ;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .name_testimonio{
+                    color: white;
+                    font-size: 2.3em;
+                }
+                p{
+                    color: rgba(255,255,255, .5);
+                    line-height: 25px;
+                    letter-spacing: 2px;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background-image: url("../images/bg_2.png");
+    background-attachment: fixed;
+    background-repeat: none;
+    background-size: cover;
+    padding: 100px 0 100px 0;
+    .spc_footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        .spc_logo{
+            .box_logo_footer{
+                width: 130px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .spc_info_footer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p{
+                text-align: left;
+                color: white;
+                a{
+                    color: white;
+                    margin-left: 1em;
+                }
+            }
+        }
+    }
+}
+
+.sub_footer{
+    background-color: #090b13;
+    padding: 1em 0;
+    p{
+        text-align: center;
+        color: #303a4c;
+    }
+}
+
+
+@import "_resp";
